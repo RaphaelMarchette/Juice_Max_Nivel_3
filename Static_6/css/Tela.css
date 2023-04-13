@@ -1,0 +1,22 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: linear-gradient(to right, rgb(20, 147, 220), rgb(17, 54, 71));
+}
+
+#bt_voltar{
+    text-decoration: none;
+    color: white;
+    border: 3px solid dodgerblue;
+    border-radius: 10px;
+    padding: 10px;
+    position:absolute;
+    bottom:2rem;
+    right:2rem;
+    width: 10rem;
+    font-size: 1rem;
+    text-align: center;
+}
+
+#bt_voltar:hover{
+    background-color: dodgerblue;
+}

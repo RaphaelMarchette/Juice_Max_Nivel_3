@@ -1,0 +1,108 @@
+
+
+.table{
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 1rem 1rem 0 0;
+    position:absolute;
+    top:10rem;
+    left: 1rem;
+    padding: 0.2rem;
+}
+
+.id, .nome, .valor, .botao{
+    font-family: Arial, Helvetica, sans-serif;
+    display: inline-block;
+    width: 3rem;
+    height: 3rem;
+    line-height:3rem;
+    text-align: center;
+    border-bottom:0.12rem solid white;
+    letter-spacing: 0.1rem;
+    font-size: 1.4rem;
+    color:white;
+}
+
+.id{
+    width: 4rem;
+    text-align: center;
+}
+
+.nome{
+    width: 8rem;
+    text-align: left;
+}
+
+.valor{
+    width: 10rem;
+}
+
+.botao{
+    width: 3rem;
+}
+
+#btn-primary, #btn-danger{
+    display:inline-block;
+    color:white;
+    background-color: dodgerblue;
+    cursor: pointer;
+    width: 2rem;
+    height: 2rem;
+    line-height: 2rem;
+    border-radius: 0.2rem;
+}
+
+#btn-danger{
+    background-color: red;
+}
+
+#btn-primary:hover,
+#btn-danger:hover{
+    background-color: rgba(5, 134, 209, 0.452);
+}
+
+
+
+
+.bt_table_batido{
+    position:absolute;
+    top:19.5rem;
+    left: 6rem;
+    text-align: center;
+}
+
+#table_batido_ativo{
+    position:absolute;
+    top:22rem;
+    left: 2rem;
+    }
+
+#table_create_juice_ativo{
+    position:absolute;
+    top:6rem;
+    left: 40rem;
+}
+
+#table_peso_ativo{
+    position:absolute;
+    top:14rem;
+    left: 40rem;
+}
+
+
+
+#table_create_juice{
+    position:absolute;
+    top:30rem;
+    left:2rem;
+}
+
+
+
+#table_batido, #table_frutas, #table_peso{
+    display: inline-block;
+    max-height: 30rem;
+    position:absolute;
+    top:22rem;
+    left: 40rem;
+    overflow:auto;
+}
