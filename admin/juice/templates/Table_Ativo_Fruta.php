@@ -19,6 +19,7 @@
 
 ?>
 
+<div class="title_table" id="table_create_juice_ativo">Fruta a ser Adicionada</div>
 
 <table class="table" id="table_create_juice_ativo">
     <thead>
@@ -26,6 +27,7 @@
             <th class="id">Id</th>
             <th class="nome">Nome</th>
             <th class="valor">Valor</th>
+            <th class="preenche"   >   </th>
             <th class="botao"   >...    </th>
             <th class="botao"   >...    </th>
         </tr>
@@ -37,6 +39,7 @@
                 echo "<td class='id'>".$user_data['id_fk']."</td>";
                 echo "<td class='nome'>".$user_data['nome']."</td>";
                 echo "<td class='valor'>".$user_data['valor']."</td>";
+                echo    "<td class='preenche'></td>";    
 
                 echo "<td class='botao'>
                     <a href='Go_Table_Frutas.php?table=create_juice_ativo&id=$user_data[id]' title='Editar' id='btn-primary'>
@@ -46,7 +49,7 @@
                     </a> 
                     </td>";
                 echo "<td class='botao'>
-                    <a href='tools/delete_4.php?table=create_juice_ativo&id=$user_data[id]' title='Deletar' id='btn-danger'>
+                    <a href='tools/Tools_Futas_Delete.php?table=create_juice_ativo&id=$user_data[id]' title='Deletar' id='btn-danger'>
                         <svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-trash-fill' viewBox='0 0 16 16'>
                             <path d='M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z'/>
                         </svg>

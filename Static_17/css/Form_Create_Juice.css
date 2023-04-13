@@ -4,7 +4,7 @@
     padding: 0.6rem;
     border-radius: 1rem;
     color: white;
-    width: 68rem;
+    width: 60rem;
     height: 54rem;
     position: absolute;
     top: 1rem;
@@ -69,7 +69,7 @@ legend{
 
 #submit{
     background-image: linear-gradient(to right,rgb(0, 92, 197), rgb(90, 20, 220));
-    width: 48%;
+    width: 29rem;
     border: none;
     padding: 0.5rem;
     color: white;
@@ -78,7 +78,7 @@ legend{
     border-radius: 0.5rem;
     position:absolute;
     bottom: 1rem;
-    left:3%;
+    left:1rem;
     text-align: center;
 }
 #submit:hover{

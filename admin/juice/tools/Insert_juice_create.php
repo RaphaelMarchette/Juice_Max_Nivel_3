@@ -63,7 +63,7 @@
             $sqlInsert_3 = "UPDATE create_juice_ativo SET id='1',id_fk='', nome='', valor='' WHERE id='1'";
             $result_3 = $conexao->query($sqlInsert_3);
         
-            $sqlInsert_4 = "UPDATE peso_ativo SET id='1',peso='' WHERE id='1'";
+            $sqlInsert_4 = "UPDATE peso_ativo SET id='1',id_fk='',peso='' WHERE id='1'";
             $result_4 = $conexao->query($sqlInsert_4);
             
             header('Location: ../new.php');

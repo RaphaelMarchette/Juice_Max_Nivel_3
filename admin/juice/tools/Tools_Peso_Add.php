@@ -21,10 +21,9 @@
             while($user_data = mysqli_fetch_assoc($result))
             {
                 $peso = $user_data['peso'];
-
             }
 
-            $sqlInsert = "UPDATE $table_2 SET peso='$peso' WHERE id= $id_2 ";
+            $sqlInsert = "UPDATE $table_2 SET id_fk='$id', peso='$peso' WHERE id= $id_2 ";
             $result_2 = $conexao->query($sqlInsert);
 
             header('Location: ../new.php');

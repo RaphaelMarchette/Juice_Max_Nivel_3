@@ -1,0 +1,148 @@
+table{
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 1rem 1rem 0 0;
+    padding: 0.2rem;
+    letter-spacing: 0.1rem;
+    font-size: 1.4rem;
+    color:white;
+    text-align: center;
+    width: 29rem;
+}
+
+
+thead{
+    display: block;
+    margin:1.8rem 0rem 0rem 0rem;
+}
+
+tbody{
+    display: block;
+    width: 100%;   
+    display: inline-block;
+    overflow:auto;
+    max-height:21.6rem;
+}
+
+tr {
+    display: flex;
+    flex-flow: row;
+    width: 28rem;
+    height: 3rem;
+    line-height:3rem;
+    font-family: Arial, Helvetica, sans-serif;
+    border-bottom:0.12rem solid white;
+    float:left;
+}
+
+tr .id {
+    flex-grow: 0;
+    flex-basis: 4rem;
+}
+
+tr .nome {
+    flex-grow: 0;
+    flex-basis: 10rem;
+    text-align: left;
+}
+
+tr .valor {
+    flex-grow: 0;
+    flex-basis: 8rem;
+}
+
+tr .preenche {
+    flex-grow: 1;
+    flex-basis: auto;
+}
+
+tr .botao {
+    flex-grow: 0;
+    flex-basis: 3rem;
+}
+
+
+#btn-primary, #btn-danger{
+    display:inline-block;
+    color:white;
+    background-color: dodgerblue;
+    cursor: pointer;
+    width: 2rem;
+    height: 2rem;
+    line-height: 2rem;
+    border-radius: 0.2rem;
+}
+
+#btn-danger{
+    background-color: red;
+}
+
+#btn-primary:hover,
+#btn-danger:hover{
+    background-color: rgba(5, 134, 209, 0.452);
+}
+
+
+
+#table_batido_ativo{
+    position:absolute;
+    top:19rem;
+    left: 2rem;
+    }
+
+#table_create_juice{
+    position:absolute;
+    top:30rem;
+    left:2rem;
+}
+
+
+
+
+
+#table_create_juice_ativo{
+    position:absolute;
+    top:5rem;
+    left: 32rem;
+}
+
+#table_peso_ativo{
+    position:absolute;
+    top:14rem;
+    left: 32rem;
+}
+
+
+
+#table_batido, #table_frutas, #table_peso{
+    display: inline-block;
+    position:absolute;
+    top:24rem;
+    left: 32rem;
+}
+
+tbody::-webkit-scrollbar {
+    width: 0.5rem;
+  }
+   
+  tbody::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.3);
+  }
+
+  tbody::-webkit-scrollbar-thumb {
+    background-color: rgb(17, 81, 145);
+    border-radius: 0.5rem;
+    border: 0.1rem solid black;
+  }
+
+  .title_table{
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 1rem 1rem 0 0;
+    padding: 0.2rem;
+    letter-spacing: 0.1rem;
+    font-size: 1.4rem;
+    color:white;
+    text-align: center;
+    width: 28.6rem;
+    height: 2rem;
+    line-height:2rem;
+}

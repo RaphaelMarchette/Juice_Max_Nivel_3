@@ -1,0 +1,13 @@
+.edit_aba_center_2::-webkit-scrollbar {
+  width: 12px;
+}
+
+.edit_aba_center_2::-webkit-scrollbar-track {
+  background: var(--cor-DarkCyan);
+}
+
+.edit_aba_center_2::-webkit-scrollbar-thumb {
+  background-color: var(--cor-DarkBlack);
+  border-radius: 20px;
+  border: 0.1rem solid var(--cor-DarkCyan);
+}

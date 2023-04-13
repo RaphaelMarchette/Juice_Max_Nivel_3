@@ -8,7 +8,7 @@
 
         $table = $_GET['table'];
         
-        $sqlDelete = "UPDATE $table SET peso='' WHERE id= 1 ";
+        $sqlDelete = "UPDATE $table SET id_fk='', peso='' WHERE id= 1 ";
 
         $resultDelete = $conexao->query($sqlDelete);
 
