@@ -1,3 +1,25 @@
+<?php
+    Include_once('../../config.php');
+
+    $nome_completo = [];
+
+    for ($i=1; $i < 6; $i++) {
+
+        $sqlSelect = "SELECT * FROM ingredientes WHERE id=$i";
+        $result = $conexao->query($sqlSelect);
+
+        if($result->num_rows > 0)
+        {
+            while($user_data = mysqli_fetch_assoc($result))
+            {
+                $nome = $user_data['nome'];
+                array_push($nome_completo, $nome);
+            }
+
+        }
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,7 +46,25 @@
             </div>
             <br><br><br>
             <div class="inputBox">
-                <input type="text" name="nome" id="nome" class="inputUser" required disabled=true>
+                <input type="text" name="nome" id="nome" class="inputUser" disabled=true required value=
+    
+                <?php 
+
+
+                    $x = 0;
+
+                    while($x<count($nome_completo)){
+
+                        echo "$nome_completo[$x]&nbsp;";
+
+                        $x++;
+
+                    }
+                
+                ?>>
+
+
+
                 <label for="nome" class="travado">Nome</label>
             </div>
             <br><br><br>

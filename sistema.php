@@ -139,7 +139,7 @@
 
                         $id_20 = $user_data['acomp_fk'];
 
-                        $sql_20 = "SELECT nome FROM batido WHERE id = $id_20";
+                        $sql_20 = "SELECT nome FROM liquido WHERE id = $id_20";
                         $result_20 = $conexao->query($sql_20);
                     
                         while($user_data_2 = mysqli_fetch_assoc($result_20)) {
