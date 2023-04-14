@@ -23,9 +23,10 @@
             if($cont == 1)
             {
                 $sqlInsert = "INSERT INTO batido_ativo (id, id_fk, nome, valor) VALUES ('1', '$id', '$nome', '$valor') ";
-                $result = $conexao->query($sqlInsert);
+                $result_3 = $conexao->query($sqlInsert);
+                header('Location: ../new.php');
             }
-            header('Location: ../new.php');
+
         }
         else
         {

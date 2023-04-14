@@ -39,4 +39,6 @@
     <a href="enter.php" id="bt_voltar">Voltar</a>
 </div>
 
+<a href="tools/Tools_Form_Limpar.php" id="bt_voltar">Limpar</a>
+
 
