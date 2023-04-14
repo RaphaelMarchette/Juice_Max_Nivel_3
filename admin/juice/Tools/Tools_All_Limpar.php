@@ -2,15 +2,18 @@
 
     include_once('../../../config.php');
 
-    $sqlDelete = "UPDATE peso_ativo SET id_fk='', peso='' WHERE id= 1 ";
+    $sqlDelete = "DELETE FROM create_juice_ativo ";
     $resultDelete = $conexao->query($sqlDelete);
 
-    $sqlDelete = "UPDATE create_juice_ativo SET id_fk='', nome='', valor='' WHERE id= 1 ";
+    $sqlDelete = "DELETE FROM peso_ativo ";
     $resultDelete = $conexao->query($sqlDelete);
 
-    $sqlDelete = "DELETE FROM batido_ativo WHERE id=1";
+    $sqlDelete = "DELETE FROM batido_ativo ";
     $resultDelete = $conexao->query($sqlDelete);
     
+    $sqlDelete = "DELETE FROM ingrediente";
+    $resultDelete = $conexao->query($sqlDelete);
+
     header('Location: ../new.php');
    
 ?>

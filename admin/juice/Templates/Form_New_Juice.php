@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <link rel="stylesheet" href="../../Static_17/css/Tela.css"/>
-    <link rel="stylesheet" href="../../Static_17/css/Table.css"/>
-    <link rel="stylesheet" href="../../Static_17/css/Form_Create_Juice.css" />
+    <link rel="stylesheet" href="../../Static_18/css/Tela.css"/>
+    <link rel="stylesheet" href="../../Static_18/css/Table.css"/>
+    <link rel="stylesheet" href="../../Static_18/css/Form_Create_Juice.css" />
     <script src="../../Static/Scripts/View.js" defer></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <title>Juice Max | New Juice</title>
@@ -39,6 +39,6 @@
     <a href="enter.php" id="bt_voltar">Voltar</a>
 </div>
 
-<a href="tools/Tools_Form_Limpar.php" id="bt_voltar">Limpar</a>
+<a href="Tools/Tools_All_Limpar.php" id="bt_voltar">Limpar</a>
 
 

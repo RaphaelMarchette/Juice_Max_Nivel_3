@@ -1,6 +1,7 @@
-<?php include 'templates/Form_Create_Juice.php' ?>
-<?php include 'templates/Table_Create_Juice.php' ?>
+<?php include 'Templates/Form_New_Juice.php' ?>
 
-<?php include 'templates/Table_Ativo_Batido.php' ?>
-<?php include 'templates/Table_Ativo_Peso.php' ?>
-<?php include 'templates/Table_Ativo_Fruta.php' ?>
+<?php include 'Templates/Table_View_Liquido.php' ?>
+<?php include 'Templates/Table_View_Peso.php' ?>
+<?php include 'Templates/Table_View_Fruta.php' ?>
+
+<?php include 'Templates/Table_View_Ingredientes.php' ?>

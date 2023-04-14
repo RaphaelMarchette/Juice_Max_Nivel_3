@@ -8,7 +8,7 @@
     $result_2 = $conexao->query($sqlSelect_2);
 
 
-    $sql_6 = "SELECT SUM(peso) as pesototal FROM create_juice";
+    $sql_6 = "SELECT SUM(peso) as pesototal FROM ingredientes";
     $sql_6 = $conexao->query($sql_6);
     $row = $sql_6->fetch_assoc();
     $soma = $row['pesototal'];
@@ -40,7 +40,7 @@
 
         $sub_valor = ($valor * $peso) * $lucro;
 
-        $sqlSelect_3 = "SELECT * FROM create_juice ";
+        $sqlSelect_3 = "SELECT * FROM ingredientes ";
         $result_3 = $conexao->query($sqlSelect_3);
         $cont = 1;
         if($result_3->num_rows > 0)
@@ -57,15 +57,14 @@
         }
         if(($cont < 6) && ($peso_Bat - $peso) >= 0 )
         {
-            $result = mysqli_query($conexao, "INSERT INTO create_juice (id, id_fk, nome, peso, valor) VALUES ('$cont', '$id_fk', '$nome', '$peso', '$sub_valor') ");
+            $result = mysqli_query($conexao, "INSERT INTO ingredientes (id, id_fk, nome, peso, valor) VALUES ('$cont', '$id_fk', '$nome', '$peso', '$sub_valor') ");
 
-
-            $sqlInsert_3 = "UPDATE create_juice_ativo SET id='1',id_fk='', nome='', valor='' WHERE id='1'";
+            $sqlInsert_3 = "DELETE FROM create_juice_ativo ";
             $result_3 = $conexao->query($sqlInsert_3);
-        
-            $sqlInsert_4 = "UPDATE peso_ativo SET id='1',id_fk='',peso='' WHERE id='1'";
+
+            $sqlInsert_4 = "DELETE FROM peso_ativo ";
             $result_4 = $conexao->query($sqlInsert_4);
-            
+        
             header('Location: ../new.php');
         }
     }
