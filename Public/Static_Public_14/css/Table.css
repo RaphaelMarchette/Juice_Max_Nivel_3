@@ -74,6 +74,7 @@ tr .botao {
     height: 2rem;
     line-height: 2rem;
     border-radius: 0.2rem;
+    text-align: center;
 }
 
 #btn-danger{

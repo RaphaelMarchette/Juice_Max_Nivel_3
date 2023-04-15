@@ -25,7 +25,7 @@
 <table class="table" id="table_view_acrescimo">
     <thead>
         <tr>
-            <th class="title_table" >Acréscimo</th>
+            <th class="title_table" >Acréscimo à ser Adicionado</th>
         <tr>
             <th class="id">Id</th>
             <th class="nome">Nome</th>
