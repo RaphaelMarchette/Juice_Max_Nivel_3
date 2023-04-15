@@ -8,19 +8,20 @@
         $table_2 = $_GET['table'];
         
     }
+    $table_Delete = 'view_suco ';
 ?>
 
 <?php
     include_once('../config.php');
 
-    $sql = "SELECT * FROM create_juice_ativo WHERE id=1";
+    $sql = "SELECT * FROM view_suco WHERE id=1";
 
     $result = $conexao->query($sql);
 
 ?>
 
 
-<table class="table" id="table_create_juice_ativo">
+<table class="table" id="table_view_suco">
     <thead>
         <tr>
             <th class="title_table" >Suco à ser Adicionado</th>
@@ -42,7 +43,7 @@
                 echo "<td class='valor'>".$user_data['valor']."</td>";
                 echo    "<td class='preenche'></td>";    
                 echo "<td class='botao'>
-                    <a href='tools/CRUD_Delete.php?table=create_juice_ativo&id=$user_data[id]' title='Deletar' id='btn-danger'>
+                    <a href='tools/CRUD_Delete.php?table_Delete=$table_Delete&id=$user_data[id]' title='Deletar' id='btn-danger'>
                         <svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-trash-fill' viewBox='0 0 16 16'>
                             <path d='M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z'/>
                         </svg>

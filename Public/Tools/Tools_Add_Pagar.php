@@ -1,20 +1,12 @@
 <?php
     include_once('../../config.php');
 
-    $sqlSelect_1 = "SELECT * FROM create_juice_ativo WHERE id='1'";
-    $sqlSelect_2 = "SELECT * FROM peso_ativo WHERE id='1'";
+    $sqlSelect_1 = "SELECT * FROM view_suco WHERE id='1'";
+    $sqlSelect_2 = "SELECT * FROM view_preferencia WHERE id='1'";
 
     $result_1 = $conexao->query($sqlSelect_1);
     $result_2 = $conexao->query($sqlSelect_2);
 
-
-    $sql_6 = "SELECT SUM(peso) as pesototal FROM ingredientes";
-    $sql_6 = $conexao->query($sql_6);
-    $row = $sql_6->fetch_assoc();
-    $soma = $row['pesototal'];
-    $soma_peso = number_format($soma, 3, '.', '');
-    $peso_Bat = 0.500 - $soma_peso;
-    $peso_Bat = number_format($peso_Bat, 3, '.', '');
 
     if($result_1->num_rows > 0)
     {
@@ -35,12 +27,10 @@
     {
         while($user_data = mysqli_fetch_assoc($result_2))
         {
-            $peso = $user_data['peso'];
+            $preferencia = $user_data['preferencia'];
         }
 
-        $sub_valor = ($valor * $peso) * $lucro;
-
-        $sqlSelect_3 = "SELECT * FROM ingredientes ";
+        $sqlSelect_3 = "SELECT * FROM view_pagar ";
         $result_3 = $conexao->query($sqlSelect_3);
         $cont = 1;
         if($result_3->num_rows > 0)
@@ -55,14 +45,14 @@
         {
             header('Location: ../Pedir.php');
         }
-        if(($cont < 6) && ($peso_Bat - $peso) >= 0 )
+        if($cont < 6)
         {
-            $result = mysqli_query($conexao, "INSERT INTO ingredientes (id, id_fk, nome, peso, valor) VALUES ('$cont', '$id_fk', '$nome', '$peso', '$sub_valor') ");
+            $result = mysqli_query($conexao, "INSERT INTO view_pagar (id, id_fk, nome, valor, preferencia) VALUES ('$cont', '$id_fk', '$nome', '$valor', '$preferencia') ");
 
-            $sqlInsert_3 = "DELETE FROM create_juice_ativo ";
+            $sqlInsert_3 = "DELETE FROM view_suco ";
             $result_3 = $conexao->query($sqlInsert_3);
 
-            $sqlInsert_4 = "DELETE FROM peso_ativo ";
+            $sqlInsert_4 = "DELETE FROM view_preferencia ";
             $result_4 = $conexao->query($sqlInsert_4);
         
             header('Location: ../Pedir.php');

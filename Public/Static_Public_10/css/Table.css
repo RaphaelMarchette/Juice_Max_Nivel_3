@@ -1,3 +1,7 @@
+.title_table{
+    width: 100%;
+}
+
 table{
     background: rgba(0, 0, 0, 0.4);
     border-radius: 1rem 1rem 0 0;
@@ -41,9 +45,9 @@ tr .id {
 }
 
 tr .nome {
-    flex-grow: 0;
-    flex-basis: 30rem;
     text-align: left;
+    flex-grow: 1;
+    flex-basis: auto;
 }
 
 tr .valor {
@@ -53,8 +57,6 @@ tr .valor {
 
 tr .preenche {
     background: rgba(0, 0, 0, 0.3);
-    flex-grow: 1;
-    flex-basis: auto;
 }
 
 tr .botao {
@@ -83,71 +85,6 @@ tr .botao {
     background-color: rgba(5, 134, 209, 0.452);
 }
 
-
-
-
-
-#table_create_juice{
-    position:absolute;
-    top:36rem;
-    left:42rem;
-}
-
-
-
-
-
-#table_create_juice_ativo{
-    width: 29rem;
-    position:absolute;
-    top:1rem;
-    left: 42rem;
-}
-
-#table_peso_ativo{
-    width: 29rem;
-    position:absolute;
-    top:13.3rem;
-    left: 42rem;
-}
-
-
-#table_batido_ativo{
-    width: 29rem;
-    position:absolute;
-    top:25.5rem;
-    left: 42rem;
-}
-
-#table_create_juice_ativo tr,
-#table_peso_ativo tr,
-#table_batido_ativo tr{
-    font-size: 1.2rem;
-    width: 30rem;
-}
-
-
-
-
-
-#table_frutas{
-    position:absolute;
-    top:1rem;
-    left: 1rem;
-}
-
-#table_batido{
-    position:absolute;
-    top:25rem;
-    left: 76rem;
-}
-
-#table_peso{
-    position:absolute;
-    top:1rem;
-    left: 76rem;
-}
-
 tbody::-webkit-scrollbar {
     width: 0.5rem;
   }
@@ -162,6 +99,69 @@ tbody::-webkit-scrollbar {
     border: 0.1rem solid black;
   }
 
- .title_table{
-    width: 100%;
+
+/* VIEW */
+#table_view_suco,
+#table_view_preferencia,
+#table_view_acrescimo{
+    width: 29rem;
+    position:absolute;
+    top:0rem;
+    left: 0rem;
+}
+
+#table_view_preferencia{
+    top:15rem;
+}
+
+#table_view_acrescimo{
+    top:30rem;
+}
+
+#table_view_suco tr,
+#table_view_preferencia tr,
+#table_view_acrescimo tr{
+    font-size: 1.2rem;
+    width: 30rem;
+}
+
+
+
+
+
+
+/* SELECT */
+
+#table_select_preferencias,
+#table_select_acrescimos{
+    width: 25rem;
+    position:absolute;
+    top: 0rem;
+    left: 0rem;
+}
+
+#table_select_acrescimos{
+    top:30rem;
+}
+
+
+#table_select_preferencias tr,
+#table_select_acrescimos tr{
+    font-size: 1.2rem;
+    width: 26rem;
+}
+
+
+
+/* LEFT */
+#table_select_sucos{
+    position:absolute;
+    top:0rem;
+    left: 0rem;
+}
+
+#table_pagar_sucos{
+    position:absolute;
+    top:30rem;
+    left:0rem;
 }
