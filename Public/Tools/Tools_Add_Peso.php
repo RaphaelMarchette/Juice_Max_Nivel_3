@@ -18,14 +18,14 @@
         {
             while($user_data = mysqli_fetch_assoc($result_Select))
             {
-                $peso = $user_data['peso'];
+                $nome = $user_data['nome'];
                 $cont += 1;
             }
             header('Location: ../Pedir.php');
 
             if($cont == 1)
             {
-                $sql_Insert = "INSERT INTO $table_Insert (id, id_fk, peso) VALUES ('1', '$id_Select', '$peso') ";
+                $sql_Insert = "INSERT INTO $table_Insert (id, id_fk, nome) VALUES ('1', '$id_Select', '$nome') ";
                 $result_Insert = $conexao->query($sql_Insert);
                 header('Location: ../Pedir.php');
             }

@@ -11,10 +11,11 @@
 ?>
 
 
-<div class="title_table" id="table_create_juice">Aba Pagar Sucos</div>
-
 <table id="table_create_juice">
     <thead>
+        <tr>
+            <th class="title_table" >Aba Pagar Sucos</th>
+        </tr>
         <tr>
             <th class="id"      >Id   </th>
             <th class="nome"    >Nome   </th>

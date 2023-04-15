@@ -1,18 +1,19 @@
 table{
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(0, 0, 0, 0.4);
     border-radius: 1rem 1rem 0 0;
     padding: 0.2rem;
     letter-spacing: 0.1rem;
     font-size: 1.4rem;
     color:white;
     text-align: center;
-    width: 29rem;
+    width: 38rem;
 }
 
 
 thead{
-    display: block;
-    margin:1.8rem 0rem 0rem 0rem;
+    display: inline-block;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 1rem 1rem 0 0;
 }
 
 tbody{
@@ -26,7 +27,7 @@ tbody{
 tr {
     display: flex;
     flex-flow: row;
-    width: 28rem;
+    width: 36.8rem;
     height: 3rem;
     line-height:3rem;
     font-family: Arial, Helvetica, sans-serif;
@@ -41,7 +42,7 @@ tr .id {
 
 tr .nome {
     flex-grow: 0;
-    flex-basis: 10rem;
+    flex-basis: 30rem;
     text-align: left;
 }
 
@@ -51,6 +52,7 @@ tr .valor {
 }
 
 tr .preenche {
+    background: rgba(0, 0, 0, 0.3);
     flex-grow: 1;
     flex-basis: auto;
 }
@@ -88,7 +90,7 @@ tr .botao {
 #table_create_juice{
     position:absolute;
     top:36rem;
-    left:32rem;
+    left:42rem;
 }
 
 
@@ -96,32 +98,54 @@ tr .botao {
 
 
 #table_create_juice_ativo{
+    width: 29rem;
     position:absolute;
-    top:5rem;
-    left: 32rem;
+    top:1rem;
+    left: 42rem;
 }
 
 #table_peso_ativo{
+    width: 29rem;
     position:absolute;
-    top:14rem;
-    left: 32rem;
+    top:13.3rem;
+    left: 42rem;
 }
+
 
 #table_batido_ativo{
+    width: 29rem;
     position:absolute;
-    top:24rem;
-    left: 32rem;
+    top:25.5rem;
+    left: 42rem;
+}
+
+#table_create_juice_ativo tr,
+#table_peso_ativo tr,
+#table_batido_ativo tr{
+    font-size: 1.2rem;
+    width: 30rem;
 }
 
 
 
 
 
-#table_batido, #table_frutas, #table_peso{
-    display: inline-block;
+#table_frutas{
     position:absolute;
-    top:5rem;
-    left: 62rem;
+    top:1rem;
+    left: 1rem;
+}
+
+#table_batido{
+    position:absolute;
+    top:25rem;
+    left: 76rem;
+}
+
+#table_peso{
+    position:absolute;
+    top:1rem;
+    left: 76rem;
 }
 
 tbody::-webkit-scrollbar {
@@ -138,15 +162,6 @@ tbody::-webkit-scrollbar {
     border: 0.1rem solid black;
   }
 
-  .title_table{
-    background: rgba(0, 0, 0, 0.3);
-    border-radius: 1rem 1rem 0 0;
-    padding: 0.2rem;
-    letter-spacing: 0.1rem;
-    font-size: 1.4rem;
-    color:white;
-    text-align: center;
-    width: 28.6rem;
-    height: 2rem;
-    line-height:2rem;
+ .title_table{
+    width: 100%;
 }
