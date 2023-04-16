@@ -49,7 +49,7 @@
             right: 1rem;
         }
 
-        .bt_entrar {
+        #bt_entrar {
             width: 8rem;
             height: 1.6rem;
             font-size: 1.6rem;
@@ -76,7 +76,17 @@
     <h1>Juice Max</h1>
     <h2>...</h2>
     <div class="box">
-        <a class="bt_entrar" href="02_pagamento.php">Entrar</a>
+        <a id="bt_entrar" href="Public/Pagar.php">Entrar</a>
     </div>
 </body>
+
+<script>
+    document.addEventListener('keydown', function(e) {
+    if(e.keyCode == 32){  //  Tecla Space
+    document.getElementById("bt_entrar").click();
+    }
+    });
+</script>
+
+
 </html>

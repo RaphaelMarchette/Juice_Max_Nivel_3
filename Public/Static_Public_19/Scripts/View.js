@@ -18,6 +18,7 @@ document.addEventListener('keydown', function(e) {
     }
 });
 
+
 $(document).ready(function() {
   $("#id").keydown(function(e) {
     // Allow: backspace, delete, tab, escape, enter and .

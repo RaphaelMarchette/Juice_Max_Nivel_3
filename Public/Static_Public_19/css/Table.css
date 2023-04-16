@@ -64,28 +64,6 @@ tr .botao {
     flex-basis: 3rem;
 }
 
-
-#btn-primary, #btn-danger{
-    display:inline-block;
-    color:white;
-    background-color: dodgerblue;
-    cursor: pointer;
-    width: 2rem;
-    height: 2rem;
-    line-height: 2rem;
-    border-radius: 0.2rem;
-    text-align: center;
-}
-
-#btn-danger{
-    background-color: red;
-}
-
-#btn-primary:hover,
-#btn-danger:hover{
-    background-color: rgba(5, 134, 209, 0.452);
-}
-
 tbody::-webkit-scrollbar {
     width: 0.5rem;
   }
@@ -112,11 +90,11 @@ tbody::-webkit-scrollbar {
 }
 
 #table_view_preferencia{
-    top:15rem;
+    top:12rem;
 }
 
 #table_view_acrescimo{
-    top:30rem;
+    top:24rem;
 }
 
 #table_view_suco tr,
@@ -142,7 +120,7 @@ tbody::-webkit-scrollbar {
 }
 
 #table_select_acrescimos{
-    top:30rem;
+    top:24rem;
 }
 
 
@@ -153,7 +131,6 @@ tbody::-webkit-scrollbar {
 }
 
 
-
 /* LEFT */
 #table_select_sucos{
     position:absolute;
@@ -161,8 +138,16 @@ tbody::-webkit-scrollbar {
     left: 0rem;
 }
 
-#table_pagar_sucos{
+
+
+
+#table_view_pedido{
     position:absolute;
-    top:30rem;
-    left:0rem;
+    top:6rem;
+    left:30rem;
+}
+
+#table_view_pedido tr{
+    font-size: 1rem;
+    width: 70rem;
 }

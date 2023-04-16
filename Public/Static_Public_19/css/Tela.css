@@ -1,0 +1,159 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: linear-gradient(to right, rgb(20, 147, 220), rgb(28, 89, 117));
+    margin: 0px;
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+}
+
+a{
+    text-decoration: none;
+}
+
+#bt_voltar{
+    text-decoration: none;
+    color: white;
+    border: 3px solid dodgerblue;
+    border-radius: 10px;
+    padding: 10px;
+    position:absolute;
+    bottom:1.4rem;
+    right:1.4rem;
+    width: 10rem;
+    font-size: 1rem;
+    text-align: center;
+}
+
+#bt_voltar:hover{
+    background-color: dodgerblue;
+}
+
+
+
+#btn-primary, #btn-danger, #btn-pesquisar{
+    display:inline-block;
+    color:white;
+    background-color: dodgerblue;
+    cursor: pointer;
+    width: 2rem;
+    height: 2rem;
+    line-height: 2rem;
+    border-radius: 0.2rem;
+    text-align: center;
+}
+
+#btn-danger{
+    background-color: red;
+}
+
+#btn-pesquisar{
+    background-image: linear-gradient(to right,rgb(0, 92, 197), rgb(90, 20, 220));
+}
+
+#btn-pesquisar:hover{
+    background-image: linear-gradient(to right,rgb(0, 80, 172), rgb(80, 19, 195));
+}
+
+
+
+#btn-primary:hover,
+#btn-danger:hover{
+    background-color: rgba(5, 134, 209, 0.452);
+}
+
+
+
+
+
+.box-search{
+    gap: .1%;
+    position:absolute;
+    bottom:0rem;
+    left:0vw;
+    width: 100%;
+    text-align: center;
+
+}
+
+.form-control{
+    background-color: whitesmoke;
+    border-radius: 0.2rem;
+    border: none;
+    width: 60%;
+    height: 2.4rem;
+}
+
+.form-control:focus, input:focus {
+    box-shadow: 0 0 0 0;
+    outline: 0;
+    border: .1rem solid rgba(0, 0, 0, 0.3);
+}
+
+
+.aba{
+    background-color: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    top: 0rem;
+    left: 0rem;
+    width: 100vw;
+    height: 5rem;
+}
+
+#bt_pedir{
+    color: white;
+    border: 0.2rem solid dodgerblue;
+    border-radius: 1rem;
+    background-color: rgba(0, 0, 0, 0.4);
+    width: 10rem;
+    height: 3.2rem;
+    line-height: 3rem;
+    font-size: 1.6rem;
+    text-align: center;
+    color: white;
+    position: absolute;
+    top:0.7rem;
+    left: 1.4rem;
+
+}
+
+#bt_home{
+    color: white;
+    border: 0.2rem solid dodgerblue;
+    border-radius: 1rem;
+    background-color: rgba(0, 0, 0, 0.4);
+    width: 10rem;
+    height: 3.2rem;
+    line-height: 3rem;
+    font-size: 1.6rem;
+    text-align: center;
+    position: absolute;
+    top:0.7rem;
+    right: 1.4rem;
+}
+
+#bt_pedir:hover,
+#bt_home:hover{
+    background-color: dodgerblue;
+}
+
+
+
+#bt_fazer_pedido{
+    background-image: linear-gradient(to right,rgb(0, 92, 197), rgb(90, 20, 220));
+    width: 30rem;
+    border: none;
+    padding: 1.5rem;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    border-radius: 0.5rem;
+    position:absolute;
+    bottom: 0rem;
+    left:0rem;
+    text-align: center;
+}
+
+#bt_fazer_pedido:hover{
+    background-image: linear-gradient(to right,rgb(0, 80, 172), rgb(80, 19, 195));
+}

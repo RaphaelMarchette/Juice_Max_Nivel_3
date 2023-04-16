@@ -40,18 +40,29 @@
                         $valor_acrescimo = $user_data_3['valor'];
                     }
 
-                    $result = mysqli_query($conexao, "INSERT INTO view_pedido (id, id_fk, nome, valor, preferencia, acrescimo, valor_acrescimo) VALUES ('defalt', '$id_fk', '$nome', '$valor', '$preferencia','$acrescimo', '$valor_acrescimo') ");
 
-                    $sqlDelete_1 = "DELETE FROM view_suco";
-                    $result_Delete_1 = $conexao->query($sqlDelete_1);
-    
-                    $sqlDelete_2 = "DELETE FROM view_preferencia";
-                    $result_Delete_2 = $conexao->query($sqlDelete_2);
-    
-                    $sqlDelete_3 = "DELETE FROM view_acrescimo";
-                    $result_Delete_3 = $conexao->query($sqlDelete_3);
-                    
-                    header('Location: ../Pagar.php');
+                    // Contagem para limite e novo ID
+                    $sqlInsert = "SELECT * FROM view_pedido ";
+                    $result_Insert = $conexao->query($sqlInsert);
+                    $cont = 1;
+                    if($result_Insert->num_rows > 0)
+                    {
+                        while($user_data = mysqli_fetch_assoc($result_Insert))
+                        {
+                            $cont+=1;
+                        }
+                    }
+                        // Inserir dados e limpas tabelas
+                        if($cont < 6)
+                        {
+                            $result = mysqli_query($conexao, "INSERT INTO view_pedido (id, id_fk, nome, valor, preferencia, acrescimo, valor_acrescimo) VALUES ('$cont', '$id_fk', '$nome', '$valor', '$preferencia','$acrescimo', '$valor_acrescimo') ");
+                            header('Location: ../Pagar.php');
+
+                        }
+                        else
+                        {
+                            header('Location: ../Pedir.php');
+                        }
 
                 }
                 else

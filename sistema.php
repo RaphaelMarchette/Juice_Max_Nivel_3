@@ -4,19 +4,19 @@
     if(!empty($_GET['search']))
     {
         $data = $_GET['search'];
-        $sql = "SELECT * FROM sucos WHERE id LIKE '%$data%' or nome LIKE '%$data%' ORDER BY id ";
+        $sql = "SELECT * FROM select_sucos WHERE id LIKE '%$data%' or nome LIKE '%$data%' ORDER BY id ";
 
     }
     else
     {
-        $sql = "SELECT * FROM sucos ";
+        $sql = "SELECT * FROM select_sucos ";
     }
 
-    $sql_2 = "SELECT * FROM marcado ";
-    $sql_3 = "SELECT * FROM acrescimos ";
-    $sql_4 = "SELECT * FROM acres_ativo ";
+
+    $sql_3 = "SELECT * FROM select_acrescimos ";
+    $sql_4 = "SELECT * FROM view_acrescimo ";
     $result = $conexao->query($sql);
-    $result_2 = $conexao->query($sql_2);
+
     $result_3 = $conexao->query($sql_3);
     $result_4 = $conexao->query($sql_4);
 ?>
@@ -137,17 +137,10 @@
                 <?php
                     while($user_data = mysqli_fetch_assoc($result)) {
 
-                        $id_20 = $user_data['acomp_fk'];
-
-                        $sql_20 = "SELECT nome FROM liquido WHERE id = $id_20";
-                        $result_20 = $conexao->query($sql_20);
-                    
-                        while($user_data_2 = mysqli_fetch_assoc($result_20)) {
 
                             echo "<tr>";
                             echo "<td>".$user_data['id']."</td>";
                             echo "<td>".$user_data['nome']."</td>";
-                            echo "<td>".$user_data_2['nome']."</td>";
                             echo "<td>".$user_data['valor']."</td>";
                             echo "<td>
                                 <a class='btn btn-sm btn-primary' href='marcado_save_edit.php?id=$user_data[id]' title='Selecionar'>
@@ -158,39 +151,13 @@
                             echo "<td>".$user_data['quantidade']."</td>";
                             echo "</tr>";
                         }
-                    }
+                    
                     ?>
             </tbody>
         </table>
     </div>
 
 
-    <div class="m-5">
-        <table class="table text-white table-bg table-bg-2">
-            <thead>
-                <tr>
-                    <th scope="col">Nome</th>
-                    <th scope="col">Valor</th>
-                    <th scope="col">                        <a class='btn btn-sm btn-danger' href='delete.php?id=$user_data[id]' title='Deletar'>
-                        <svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-trash-fill' viewBox='0 0 16 16'>
-                            <path d='M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z'/>
-                        </svg>
-                    </a></th>
-                </tr>
-            </thead>
-            <tbody>
-                <?php
-                    while($user_data = mysqli_fetch_assoc($result_2)) {
-                        echo "<tr>";
-                        echo "<td>".$user_data['nome']."</td>";
-                        echo "<td>".$user_data['valor']."</td>";
-                        echo "<td></td>";
-                        echo "</tr>";
-                    }
-                    ?>
-            </tbody>
-        </table>
-    </div>
 
 
     <div class="m-5">
@@ -253,9 +220,9 @@
 
 
     <a class='btn btn-sm btn-success' href='finalizar.php?id=$user_data[id]' title='Selecionar' id='id_finalizar'>Fazer Pedido
-                            <svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-trash-fill' viewBox='0 0 16 16'>
-                            </svg>
-                        </a>
+        <svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-trash-fill' viewBox='0 0 16 16'>
+        </svg>
+    </a>
 
 
 

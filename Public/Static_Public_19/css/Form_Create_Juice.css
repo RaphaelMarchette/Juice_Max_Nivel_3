@@ -1,16 +1,10 @@
-.container {
-    width: 100vw;
-    height: 100vh;
-    align-items: center;
-}
-
 .container_left {
     display: inline-block;
     padding: 0rem;
     margin: 0;
     color: white;
     width: 38rem;
-    height: 96vh;
+    height: 52rem;
     position: absolute;
     top: 1rem;
     left: 20%;
@@ -23,7 +17,7 @@
     margin: 0;
     color: white;
     width: 30.6rem;
-    height: 96vh;
+    height: 52rem;
     position: absolute;
     top: 1rem;
     left: 40%;
@@ -35,10 +29,22 @@
     margin: 0;
     color: white;
     width: 26.7rem;
-    height: 96vh;
+    height: 52rem;
     position: absolute;
     top: 1rem;
     left: 72%;
+}
+
+.container_maior {
+    display: inline-block;
+    padding: 0rem;
+    margin: 0;
+    color: white;
+    width: 70%;
+    height: 48rem;
+    position: absolute;
+    top: 5rem;
+    left: 25%;
 }
 
 .box{
@@ -120,8 +126,8 @@ fieldset{
     cursor: pointer;
     border-radius: 0.5rem;
     position:absolute;
-    bottom: 1rem;
-    left:1rem;
+    bottom: 0rem;
+    left:0rem;
     text-align: center;
 }
 #submit:hover{

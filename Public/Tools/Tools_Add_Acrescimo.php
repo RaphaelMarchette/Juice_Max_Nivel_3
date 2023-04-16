@@ -28,6 +28,7 @@
             {
                 $sql_Insert = "INSERT INTO $table_Insert (id, id_fk, nome, valor) VALUES ('1', '$id_Select', '$nome', '$valor') ";
                 $result_Insert = $conexao->query($sql_Insert);
+                
                 header('Location: ../Pedir.php');
             }
         }
